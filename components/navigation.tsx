@@ -1,0 +1,188 @@
+"use client"
+
+import { useState } from "react"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Menu, X, Phone, Calendar, Heart } from "lucide-react"
+import { SearchBar } from "./search-bar"
+
+export function Navigation() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <nav className="fixed top-0 w-full z-50 glass-card">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-12 sm:h-14 md:h-16">
+          <div className="flex items-center flex-shrink-0 min-w-0">
+            <Link
+              href="/"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-primary flex items-center gap-1.5 sm:gap-2"
+            >
+              <div className="w-5 sm:w-6 md:w-7 lg:w-8 h-5 sm:h-6 md:h-7 lg:h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                <Heart className="w-2.5 sm:w-3 md:w-3.5 lg:w-4 h-2.5 sm:h-3 md:h-3.5 lg:h-4 text-white fill-white" />
+              </div>
+              <span className="text-sm sm:text-base md:text-lg lg:text-xl font-extrabold tracking-tight">
+                MED<span className="text-blue-600">Care</span>
+              </span>
+            </Link>
+          </div>
+
+          <div className="hidden md:flex items-center flex-1 max-w-xs lg:max-w-sm xl:max-w-md mx-2 lg:mx-4 xl:mx-8">
+            <SearchBar />
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:block">
+            <div className="flex items-baseline space-x-2 xl:space-x-4 2xl:space-x-6">
+              <Link
+                href="/"
+                className="text-xs xl:text-sm 2xl:text-base text-foreground hover:text-primary transition-colors whitespace-nowrap px-2 py-1 rounded-md hover:bg-primary/5"
+              >
+                Home
+              </Link>
+              <Link
+                href="/about"
+                className="text-xs xl:text-sm 2xl:text-base text-foreground hover:text-primary transition-colors whitespace-nowrap px-2 py-1 rounded-md hover:bg-primary/5"
+              >
+                About Us
+              </Link>
+              <Link
+                href="/services"
+                className="text-xs xl:text-sm 2xl:text-base text-foreground hover:text-primary transition-colors whitespace-nowrap px-2 py-1 rounded-md hover:bg-primary/5"
+              >
+                Services
+              </Link>
+              <Link
+                href="/doctors"
+                className="text-xs xl:text-sm 2xl:text-base text-foreground hover:text-primary transition-colors whitespace-nowrap px-2 py-1 rounded-md hover:bg-primary/5"
+              >
+                Doctors
+              </Link>
+              <Link
+                href="/news"
+                className="text-xs xl:text-sm 2xl:text-base text-foreground hover:text-primary transition-colors whitespace-nowrap px-2 py-1 rounded-md hover:bg-primary/5"
+              >
+                News
+              </Link>
+              <Link
+                href="/contact"
+                className="text-xs xl:text-sm 2xl:text-base text-foreground hover:text-primary transition-colors whitespace-nowrap px-2 py-1 rounded-md hover:bg-primary/5"
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+
+          <div className="hidden sm:flex items-center space-x-1 md:space-x-2 lg:space-x-3 flex-shrink-0">
+            <Button
+              size="sm"
+              variant="outline"
+              className="flex items-center gap-1 lg:gap-2 text-xs lg:text-sm px-2 lg:px-3 py-1.5 lg:py-2 hover:bg-primary hover:text-white transition-colors bg-transparent"
+            >
+              <Phone className="h-3 lg:h-4 w-3 lg:w-4" />
+              <span className="hidden md:inline">+1 (555) 123-4567</span>
+              <span className="md:hidden">Call</span>
+            </Button>
+            <Link href="/book-appointment">
+              <Button
+                size="sm"
+                className="flex items-center gap-1 lg:gap-2 text-xs lg:text-sm px-2 lg:px-3 py-1.5 lg:py-2 bg-primary hover:bg-primary/90"
+              >
+                <Calendar className="h-3 lg:h-4 w-3 lg:w-4" />
+                <span className="hidden md:inline">Book Appointment</span>
+                <span className="md:hidden">Book</span>
+              </Button>
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="sm:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-foreground hover:text-primary p-1.5 -mr-1.5 rounded-md hover:bg-primary/5 transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
+        </div>
+
+        {isOpen && (
+          <div className="sm:hidden border-t border-border/10 animate-in slide-in-from-top-2 duration-200">
+            <div className="px-2 pt-2 pb-3 space-y-1 glass-card mt-2 rounded-lg mx-2">
+              {/* Mobile Search */}
+              <div className="px-3 py-2 md:hidden">
+                <SearchBar />
+              </div>
+
+              {/* Mobile Navigation Links */}
+              <Link
+                href="/"
+                className="block px-3 py-2.5 text-sm font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-md transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Home
+              </Link>
+              <Link
+                href="/about"
+                className="block px-3 py-2.5 text-sm font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-md transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                About Us
+              </Link>
+              <Link
+                href="/services"
+                className="block px-3 py-2.5 text-sm font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-md transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Services
+              </Link>
+              <Link
+                href="/doctors"
+                className="block px-3 py-2.5 text-sm font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-md transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Doctors
+              </Link>
+              <Link
+                href="/news"
+                className="block px-3 py-2.5 text-sm font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-md transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                News
+              </Link>
+              <Link
+                href="/contact"
+                className="block px-3 py-2.5 text-sm font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-md transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Contact
+              </Link>
+
+              {/* Mobile CTA Buttons */}
+              <div className="flex flex-col space-y-2 px-3 py-3 border-t border-border/10 mt-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="flex items-center justify-center gap-2 bg-transparent w-full hover:bg-primary hover:text-white transition-colors"
+                >
+                  <Phone className="h-4 w-4" />
+                  +1 (555) 123-4567
+                </Button>
+                <Link href="/book-appointment" onClick={() => setIsOpen(false)}>
+                  <Button
+                    size="sm"
+                    className="flex items-center justify-center gap-2 w-full bg-primary hover:bg-primary/90"
+                  >
+                    <Calendar className="h-4 w-4" />
+                    Book Appointment
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
+  )
+}
