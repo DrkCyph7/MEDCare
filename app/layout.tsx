@@ -7,35 +7,35 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "MEDArt - The Best Medical Services | Professional Healthcare",
+  title: "MEDCare - The Best Medical Services | Professional Healthcare",
   description:
-    "Experience the best medical services with MEDArt. Professional healthcare with advanced facilities, experienced doctors, and patient-first approach. Book appointments online, emergency care available 24/7.",
+    "Experience the best medical services with MEDCare. Professional healthcare with advanced facilities, experienced doctors, and patient-first approach. Book appointments online, emergency care available 24/7.",
   keywords:
     "medical services, healthcare, doctors, hospital, emergency care, appointment booking, cardiology, pediatrics, diagnostics, telemedicine",
-  authors: [{ name: "MEDArt Medical Center" }],
-  creator: "MEDArt",
-  publisher: "MEDArt Medical Center",
+  authors: [{ name: "MEDCare Medical Center" }],
+  creator: "MEDCare",
+  publisher: "MEDCare Medical Center",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://medart-medical.com"),
+  metadataBase: new URL("https://medcare-f2208.web.app"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "MEDArt - The Best Medical Services",
+    title: "MEDcare - The Best Medical Services",
     description:
       "Professional healthcare with advanced facilities and experienced doctors. Your health is our priority.",
-    url: "https://medart-medical.com",
-    siteName: "MEDArt Medical Center",
+    url: "https://medcare-f2208.web.app",
+    siteName: "MEDcare Medical Center",
     images: [
       {
         url: "/images/medical-hero.jpg",
         width: 1200,
         height: 630,
-        alt: "MEDArt Medical Team",
+        alt: "MEDcare Medical Team",
       },
     ],
     locale: "en_US",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MEDArt - The Best Medical Services",
+    title: "MEDcare - The Best Medical Services",
     description: "Professional healthcare with advanced facilities and experienced doctors.",
     images: ["/images/medical-hero.jpg"],
   },
