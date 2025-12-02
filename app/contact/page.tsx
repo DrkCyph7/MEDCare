@@ -321,9 +321,9 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Map Placeholder */}
             <div className="lg:col-span-2">
-              <Card className="glass-card h-96">
-                <CardContent className="p-0 h-full">
-                  <div className="h-full bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg flex items-center justify-center">
+              <Card className="glass-card">
+                <CardContent className="p-0">
+                  <div className="min-h-[300px] md:min-h-[420px] lg:min-h-[520px] bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg flex items-center justify-center">
                     <div className="text-center">
                       <MapPin className="h-16 w-16 text-primary mx-auto mb-4" />
                       <h3 className="text-xl font-semibold text-foreground mb-2">Interactive Map</h3>
