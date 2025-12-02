@@ -27,76 +27,76 @@ export function Navigation() {
             </Link>
           </div>
 
-          <div className="hidden md:flex items-center flex-1 max-w-xs lg:max-w-sm xl:max-w-md mx-2 lg:mx-4 xl:mx-8">
+          <div className="hidden lg:flex items-center flex-1 max-w-xs lg:max-w-sm xl:max-w-md mx-2 lg:mx-4 xl:mx-8">
             <SearchBar />
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:block">
-            <div className="flex items-baseline space-x-2 xl:space-x-4 2xl:space-x-6">
+          <div className="hidden md:block">
+            <div className="flex items-baseline space-x-1.5 md:space-x-2 lg:space-x-3 xl:space-x-4 2xl:space-x-6">
               <Link
                 href="/"
-                className="text-xs xl:text-sm 2xl:text-base text-foreground hover:text-primary transition-colors whitespace-nowrap px-2 py-1 rounded-md hover:bg-primary/5"
+                className="text-xs md:text-sm lg:text-base text-foreground hover:text-primary transition-colors whitespace-nowrap px-2 md:px-2.5 lg:px-3 py-1.5 md:py-2 rounded-md hover:bg-primary/5 min-h-[36px] flex items-center"
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="text-xs xl:text-sm 2xl:text-base text-foreground hover:text-primary transition-colors whitespace-nowrap px-2 py-1 rounded-md hover:bg-primary/5"
+                className="text-xs md:text-sm lg:text-base text-foreground hover:text-primary transition-colors whitespace-nowrap px-2 md:px-2.5 lg:px-3 py-1.5 md:py-2 rounded-md hover:bg-primary/5 min-h-[36px] flex items-center"
               >
                 About Us
               </Link>
               <Link
                 href="/services"
-                className="text-xs xl:text-sm 2xl:text-base text-foreground hover:text-primary transition-colors whitespace-nowrap px-2 py-1 rounded-md hover:bg-primary/5"
+                className="text-xs md:text-sm lg:text-base text-foreground hover:text-primary transition-colors whitespace-nowrap px-2 md:px-2.5 lg:px-3 py-1.5 md:py-2 rounded-md hover:bg-primary/5 min-h-[36px] flex items-center"
               >
                 Services
               </Link>
               <Link
                 href="/doctors"
-                className="text-xs xl:text-sm 2xl:text-base text-foreground hover:text-primary transition-colors whitespace-nowrap px-2 py-1 rounded-md hover:bg-primary/5"
+                className="text-xs md:text-sm lg:text-base text-foreground hover:text-primary transition-colors whitespace-nowrap px-2 md:px-2.5 lg:px-3 py-1.5 md:py-2 rounded-md hover:bg-primary/5 min-h-[36px] flex items-center"
               >
                 Doctors
               </Link>
               <Link
                 href="/news"
-                className="text-xs xl:text-sm 2xl:text-base text-foreground hover:text-primary transition-colors whitespace-nowrap px-2 py-1 rounded-md hover:bg-primary/5"
+                className="text-xs md:text-sm lg:text-base text-foreground hover:text-primary transition-colors whitespace-nowrap px-2 md:px-2.5 lg:px-3 py-1.5 md:py-2 rounded-md hover:bg-primary/5 min-h-[36px] flex items-center"
               >
                 News
               </Link>
               <Link
                 href="/contact"
-                className="text-xs xl:text-sm 2xl:text-base text-foreground hover:text-primary transition-colors whitespace-nowrap px-2 py-1 rounded-md hover:bg-primary/5"
+                className="text-xs md:text-sm lg:text-base text-foreground hover:text-primary transition-colors whitespace-nowrap px-2 md:px-2.5 lg:px-3 py-1.5 md:py-2 rounded-md hover:bg-primary/5 min-h-[36px] flex items-center"
               >
                 Contact
               </Link>
             </div>
           </div>
 
-          <div className="hidden sm:flex items-center space-x-1 md:space-x-2 lg:space-x-3 flex-shrink-0">
+          <div className="hidden md:flex items-center space-x-2 lg:space-x-3 flex-shrink-0">
             <Button
               size="sm"
               variant="outline"
-              className="flex items-center gap-1 lg:gap-2 text-xs lg:text-sm px-3 lg:px-4 py-2 lg:py-2.5 hover:bg-primary hover:text-white transition-colors bg-transparent min-h-[40px]"
+              className="flex items-center gap-1.5 lg:gap-2 text-xs md:text-sm px-2.5 md:px-3 lg:px-4 py-2 hover:bg-primary hover:text-white transition-colors bg-transparent min-h-[40px]"
             >
-              <Phone className="h-4 lg:h-4 w-4 lg:w-4" />
-              <span className="hidden md:inline">+1 (555) 123-4567</span>
-              <span className="md:hidden">Call</span>
+              <Phone className="h-4 w-4" />
+              <span className="hidden lg:inline">+1 (555) 123-4567</span>
+              <span className="lg:hidden">Call</span>
             </Button>
             <Link href="/book-appointment">
               <Button
                 size="sm"
-                className="flex items-center gap-1 lg:gap-2 text-xs lg:text-sm px-3 lg:px-4 py-2 lg:py-2.5 bg-primary hover:bg-primary/90 min-h-[40px]"
+                className="flex items-center gap-1.5 lg:gap-2 text-xs md:text-sm px-2.5 md:px-3 lg:px-4 py-2 bg-primary hover:bg-primary/90 min-h-[40px]"
               >
-                <Calendar className="h-4 lg:h-4 w-4 lg:w-4" />
-                <span className="hidden md:inline">Book Appointment</span>
-                <span className="md:hidden">Book</span>
+                <Calendar className="h-4 w-4" />
+                <span className="hidden lg:inline">Book Appointment</span>
+                <span className="lg:hidden">Book</span>
               </Button>
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="sm:hidden">
+          <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-foreground hover:text-primary p-2 -mr-2 rounded-md hover:bg-primary/5 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
@@ -108,10 +108,10 @@ export function Navigation() {
         </div>
 
         {isOpen && (
-          <div className="sm:hidden border-t border-border/10 animate-in slide-in-from-top-2 duration-200">
+          <div className="md:hidden border-t border-border/10 animate-in slide-in-from-top-2 duration-200">
             <div className="px-2 pt-2 pb-3 space-y-1 glass-card mt-2 rounded-lg mx-2">
               {/* Mobile Search */}
-              <div className="px-3 py-2 md:hidden">
+              <div className="px-3 py-2 lg:hidden">
                 <SearchBar />
               </div>
 
