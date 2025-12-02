@@ -78,8 +78,18 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
+    // Handle form submission - in production, this would send to an API
+    // For now, show success feedback
+    alert('Thank you! Your message has been sent successfully. We\'ll get back to you soon.')
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      department: '',
+      subject: '',
+      message: '',
+    })
   }
 
   return (
@@ -87,11 +97,11 @@ export default function ContactPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-blue-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">Contact Us</h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
+      <section className="pt-20 sm:pt-24 pb-12 sm:pb-16 bg-gradient-to-br from-blue-50 to-white">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 text-balance px-2">Contact Us</h1>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed px-4">
               We're here to help with all your healthcare needs. Reach out to us for appointments, questions, or
               emergency assistance.
             </p>
@@ -100,13 +110,13 @@ export default function ContactPage() {
       </section>
 
       {/* Emergency Numbers */}
-      <section className="py-12 bg-destructive text-destructive-foreground">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-8 sm:py-12 bg-destructive text-destructive-foreground">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
           <div className="flex items-center justify-center gap-3 mb-8">
             <AlertTriangle className="h-6 w-6" />
             <h2 className="text-2xl font-bold">Emergency Hotlines</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {emergencyNumbers.map((emergency, index) => (
               <Card key={index} className="bg-destructive-foreground text-destructive border-0">
                 <CardContent className="p-4 text-center">
@@ -122,8 +132,8 @@ export default function ContactPage() {
       </section>
 
       {/* Main Contact Section */}
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 md:py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <Card className="glass-card">

@@ -77,17 +77,19 @@ export function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <Button
-              size="lg"
-              className="flex items-center justify-center gap-2 text-sm sm:text-base lg:text-lg px-6 sm:px-8 py-3 sm:py-4 lg:py-6 hover:scale-105 transition-transform bg-primary hover:bg-primary/90 w-full sm:w-auto"
-            >
-              Learn More
-            </Button>
-            <Link href="/book-appointment">
+            <Link href="/services" className="w-full sm:w-auto">
+              <Button
+                size="lg"
+                className="flex items-center justify-center gap-2 text-sm sm:text-base lg:text-lg px-6 sm:px-8 py-4 sm:py-5 lg:py-6 hover:scale-105 transition-transform bg-primary hover:bg-primary/90 w-full min-h-[48px]"
+              >
+                Learn More
+              </Button>
+            </Link>
+            <Link href="/book-appointment" className="w-full sm:w-auto">
               <Button
                 variant="outline"
                 size="lg"
-                className="flex items-center justify-center gap-2 text-sm sm:text-base lg:text-lg px-6 sm:px-8 py-3 sm:py-4 lg:py-6 hover:scale-105 transition-transform border-primary text-primary hover:bg-primary hover:text-white w-full sm:w-auto bg-transparent"
+                className="flex items-center justify-center gap-2 text-sm sm:text-base lg:text-lg px-6 sm:px-8 py-4 sm:py-5 lg:py-6 hover:scale-105 transition-transform border-primary text-primary hover:bg-primary hover:text-white w-full bg-transparent min-h-[48px]"
               >
                 <Calendar className="h-4 sm:h-5 w-4 sm:w-5" />
                 Book Now

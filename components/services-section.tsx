@@ -55,7 +55,7 @@ export function ServicesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service, index) => (
             <Card key={index} className="glass-card hover:scale-105 transition-all duration-300 group">
               <CardHeader>

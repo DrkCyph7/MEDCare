@@ -11,8 +11,8 @@ export function Navigation() {
 
   return (
     <nav className="fixed top-0 w-full z-50 glass-card">
-      <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-12 sm:h-14 md:h-16">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-14 sm:h-16 md:h-18">
           <div className="flex items-center flex-shrink-0 min-w-0">
             <Link
               href="/"
@@ -21,7 +21,7 @@ export function Navigation() {
               <div className="w-5 sm:w-6 md:w-7 lg:w-8 h-5 sm:h-6 md:h-7 lg:h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                 <Heart className="w-2.5 sm:w-3 md:w-3.5 lg:w-4 h-2.5 sm:h-3 md:h-3.5 lg:h-4 text-white fill-white" />
               </div>
-              <span className="text-sm sm:text-base md:text-lg lg:text-xl font-extrabold tracking-tight">
+              <span className="text-base sm:text-lg md:text-xl lg:text-2xl font-extrabold tracking-tight">
                 MED<span className="text-blue-600">Care</span>
               </span>
             </Link>
@@ -77,18 +77,18 @@ export function Navigation() {
             <Button
               size="sm"
               variant="outline"
-              className="flex items-center gap-1 lg:gap-2 text-xs lg:text-sm px-2 lg:px-3 py-1.5 lg:py-2 hover:bg-primary hover:text-white transition-colors bg-transparent"
+              className="flex items-center gap-1 lg:gap-2 text-xs lg:text-sm px-3 lg:px-4 py-2 lg:py-2.5 hover:bg-primary hover:text-white transition-colors bg-transparent min-h-[40px]"
             >
-              <Phone className="h-3 lg:h-4 w-3 lg:w-4" />
+              <Phone className="h-4 lg:h-4 w-4 lg:w-4" />
               <span className="hidden md:inline">+1 (555) 123-4567</span>
               <span className="md:hidden">Call</span>
             </Button>
             <Link href="/book-appointment">
               <Button
                 size="sm"
-                className="flex items-center gap-1 lg:gap-2 text-xs lg:text-sm px-2 lg:px-3 py-1.5 lg:py-2 bg-primary hover:bg-primary/90"
+                className="flex items-center gap-1 lg:gap-2 text-xs lg:text-sm px-3 lg:px-4 py-2 lg:py-2.5 bg-primary hover:bg-primary/90 min-h-[40px]"
               >
-                <Calendar className="h-3 lg:h-4 w-3 lg:w-4" />
+                <Calendar className="h-4 lg:h-4 w-4 lg:w-4" />
                 <span className="hidden md:inline">Book Appointment</span>
                 <span className="md:hidden">Book</span>
               </Button>
@@ -99,10 +99,10 @@ export function Navigation() {
           <div className="sm:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-foreground hover:text-primary p-1.5 -mr-1.5 rounded-md hover:bg-primary/5 transition-colors"
+              className="text-foreground hover:text-primary p-2 -mr-2 rounded-md hover:bg-primary/5 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
               aria-label="Toggle menu"
             >
-              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
@@ -118,63 +118,63 @@ export function Navigation() {
               {/* Mobile Navigation Links */}
               <Link
                 href="/"
-                className="block px-3 py-2.5 text-sm font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-md transition-colors"
+                className="block px-4 py-3 text-base font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-md transition-colors min-h-[44px] flex items-center"
                 onClick={() => setIsOpen(false)}
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="block px-3 py-2.5 text-sm font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-md transition-colors"
+                className="block px-4 py-3 text-base font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-md transition-colors min-h-[44px] flex items-center"
                 onClick={() => setIsOpen(false)}
               >
                 About Us
               </Link>
               <Link
                 href="/services"
-                className="block px-3 py-2.5 text-sm font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-md transition-colors"
+                className="block px-4 py-3 text-base font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-md transition-colors min-h-[44px] flex items-center"
                 onClick={() => setIsOpen(false)}
               >
                 Services
               </Link>
               <Link
                 href="/doctors"
-                className="block px-3 py-2.5 text-sm font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-md transition-colors"
+                className="block px-4 py-3 text-base font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-md transition-colors min-h-[44px] flex items-center"
                 onClick={() => setIsOpen(false)}
               >
                 Doctors
               </Link>
               <Link
                 href="/news"
-                className="block px-3 py-2.5 text-sm font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-md transition-colors"
+                className="block px-4 py-3 text-base font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-md transition-colors min-h-[44px] flex items-center"
                 onClick={() => setIsOpen(false)}
               >
                 News
               </Link>
               <Link
                 href="/contact"
-                className="block px-3 py-2.5 text-sm font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-md transition-colors"
+                className="block px-4 py-3 text-base font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-md transition-colors min-h-[44px] flex items-center"
                 onClick={() => setIsOpen(false)}
               >
                 Contact
               </Link>
 
               {/* Mobile CTA Buttons */}
-              <div className="flex flex-col space-y-2 px-3 py-3 border-t border-border/10 mt-2">
+              <div className="flex flex-col space-y-3 px-3 py-4 border-t border-border/10 mt-2">
                 <Button
                   variant="outline"
-                  size="sm"
-                  className="flex items-center justify-center gap-2 bg-transparent w-full hover:bg-primary hover:text-white transition-colors"
+                  size="lg"
+                  className="flex items-center justify-center gap-2 bg-transparent w-full hover:bg-primary hover:text-white transition-colors min-h-[48px] text-base"
                 >
-                  <Phone className="h-4 w-4" />
+                  <Phone className="h-5 w-5" />
                   +1 (555) 123-4567
                 </Button>
-                <Link href="/book-appointment" onClick={() => setIsOpen(false)}>
+                <Link href="/book-appointment" onClick={() => setIsOpen(false)} className="w-full">
                   <Button
-                    size="sm"
-                    className="flex items-center justify-center gap-2 w-full bg-primary hover:bg-primary/90"
+                    size="lg"
+                    className="flex items-center justify-center gap-2 w-full bg-primary hover:bg-primary/90 min-h-[48px] text-base"
                   >
-                    <Calendar className="h-4 w-4" />
+                    <Calendar className="h-5 w-5" />
                     Book Appointment
                   </Button>
                 </Link>

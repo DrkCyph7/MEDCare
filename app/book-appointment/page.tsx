@@ -90,12 +90,12 @@ export default function BookAppointmentPage() {
     return (
       <main className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
         <Navigation />
-        <div className="pt-20 pb-12">
+        <div className="pt-16 sm:pt-20 pb-8 sm:pb-12">
           <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="glass-card p-8 rounded-2xl">
+            <div className="glass-card p-6 sm:p-8 rounded-2xl">
               <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-6" />
-              <h1 className="text-3xl font-bold text-foreground mb-4">Appointment Confirmed!</h1>
-              <p className="text-lg text-muted-foreground mb-6">
+              <h1 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">Appointment Confirmed!</h1>
+              <p className="text-base sm:text-lg text-muted-foreground mb-6">
                 Your appointment has been successfully booked. You will receive a confirmation email shortly.
               </p>
               <div className="bg-muted p-4 rounded-lg text-left space-y-2">
@@ -129,11 +129,11 @@ export default function BookAppointmentPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
       <Navigation />
-      <div className="pt-20 pb-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="pt-16 sm:pt-20 pb-8 sm:pb-12">
+        <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-foreground mb-4">Book an Appointment</h1>
-            <p className="text-lg text-muted-foreground">Schedule your visit with our medical professionals</p>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4 px-2">Book an Appointment</h1>
+            <p className="text-base sm:text-lg text-muted-foreground px-4">Schedule your visit with our medical professionals</p>
           </div>
 
           {/* Progress Bar */}

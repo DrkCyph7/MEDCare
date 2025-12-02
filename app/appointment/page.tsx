@@ -105,14 +105,26 @@ export default function AppointmentPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle appointment booking
-    console.log("Appointment booked:", {
-      department: selectedDepartment,
-      doctor: selectedDoctor,
-      date: selectedDate,
-      time: selectedTime,
-      type: appointmentType,
-      patient: patientInfo,
+    // Handle appointment booking - in production, this would send to an API
+    // For now, show success feedback
+    alert(`Appointment confirmed!\n\nDepartment: ${selectedDepartment}\nDoctor: ${selectedDoctor}\nDate: ${selectedDate}\nTime: ${selectedTime}\n\nYou will receive a confirmation email shortly.`)
+    // Reset form
+    setCurrentStep(1)
+    setSelectedDepartment('')
+    setSelectedDoctor('')
+    setSelectedDate(undefined)
+    setSelectedTime('')
+    setAppointmentType('')
+    setPatientInfo({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      dateOfBirth: '',
+      insurance: '',
+      reason: '',
+      isNewPatient: false,
+      hasInsurance: true,
     })
   }
 
@@ -128,11 +140,11 @@ export default function AppointmentPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-blue-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">Book an Appointment</h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
+      <section className="pt-20 sm:pt-24 pb-12 sm:pb-16 bg-gradient-to-br from-blue-50 to-white">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 text-balance px-2">Book an Appointment</h1>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed px-4">
               Schedule your visit with our experienced medical professionals. Choose your preferred department, doctor,
               and time slot.
             </p>
